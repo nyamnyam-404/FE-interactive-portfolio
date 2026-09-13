@@ -45,6 +45,39 @@ main {
 
 .scene-1 {
   background-color: #eeeeee;
+  position: relative;
+}
+
+.parallax-layer {
+  position: absolute;
+  padding: 20px;
+}
+
+.mountain-back {
+  width: 20vw;
+  height: 10vh;
+  background-color: rgb(104, 104, 255);
+
+  top: 20%;
+  left: 10%;
+}
+
+.mountain-front {
+  width: 20vw;
+  height: 10vh;
+  background-color: rgb(40, 167, 108);
+  
+  top: 50%;
+  left: 50%;
+}
+
+.trees {
+  width: 20vw;
+  height: 10vh;
+  background-color: rgb(39, 85, 47);
+  
+  top: 80%;
+  left: 70%;
 }
 
 .scene-2 {
