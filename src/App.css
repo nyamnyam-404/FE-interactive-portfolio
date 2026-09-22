@@ -44,8 +44,20 @@ main {
 }
 
 .scene-1 {
-  background-color: #eeeeee;
+  flex: 0 0 200vw;
+  height: 100vh;
   position: relative;
+  overflow: hidden;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.scene01-background {
+  display: block;
+  height: 100vh;
+  width: auto;
+  max-width: none;
 }
 
 .parallax-layer {

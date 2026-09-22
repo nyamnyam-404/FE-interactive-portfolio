@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 type UseHorizontalStoryProps = {
   sectionRef: RefObject<HTMLElement | null>;
   containerRef: RefObject<HTMLDivElement | null>;
-  birdRef: RefObject<SVGPolygonElement | null>;
+  birdRef: RefObject<SVGGElement | null>;
 };
 
 function addHorizontalScroll(
@@ -30,7 +30,7 @@ function addHorizontalScroll(
 
 function addBirdMotion(
   timeline: gsap.core.Timeline,
-  bird: SVGPolygonElement
+  bird: SVGGElement
 ) {
   timeline.to(
     bird,

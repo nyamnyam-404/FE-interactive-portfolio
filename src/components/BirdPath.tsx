@@ -1,10 +1,12 @@
 import type { RefObject } from "react";
+import birdImage from "../assets/scene01/Pfb.jpg"
 
 type BirdPathProps = {
-  birdRef: RefObject<SVGPolygonElement | null>;
+  birdRef: RefObject<SVGGElement | null>;
+  birdImageRef: RefObject<SVGImageElement | null>;
 };
 
-function BirdPath({ birdRef }: BirdPathProps) {
+function BirdPath({ birdRef, birdImageRef }: BirdPathProps) {
   return (
     <svg className="bird-path" viewBox="0 -100 1400 500">
       <path
@@ -14,11 +16,14 @@ function BirdPath({ birdRef }: BirdPathProps) {
         stroke="black"
       />
 
-      <polygon
-        ref={birdRef}
-        points="0,-10 25,0 0,10"
-        fill="red"
-      />
+      <g ref={birdRef}>
+        <image
+          ref={birdImageRef}
+          href={birdImage}
+          width="80"
+          height="80"
+        />
+      </g>
     </svg>
   );
 }

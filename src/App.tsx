@@ -12,7 +12,8 @@ import "./App.css";
 function App() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const birdRef = useRef<SVGPolygonElement | null>(null);
+  const birdRef = useRef<SVGGElement | null>(null);
+  const birdImageRef = useRef<SVGImageElement>(null);
 
   useHorizontalStory({
     sectionRef,
@@ -23,7 +24,10 @@ function App() {
   return (
     <main>
       <section ref={sectionRef} className="horizontal-section">
-        <BirdPath birdRef={birdRef} />
+        <BirdPath
+          birdRef={birdRef}
+          birdImageRef={birdImageRef}
+        />
 
         <div ref={containerRef} className="horizontal-container">
           <SceneOne />

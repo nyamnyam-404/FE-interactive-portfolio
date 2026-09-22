@@ -1,13 +1,6 @@
 function SceneThree() {
   return (
-    <div className="scene scene-1">
-      <div
-        className="parallax-layer mountain-back"
-        data-speed="0.4"
-      >
-        BACK
-      </div>
-
+    <div className="scene scene-3">
       <div
         className="parallax-layer mountain-front"
         data-speed="0.2"
