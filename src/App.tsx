@@ -1,9 +1,7 @@
 import { useRef } from "react";
 
-import BirdPath from "./components/BirdPath";
+// import BirdPath from "./components/BirdPath";
 import SceneOne from "./components/SceneOne";
-import SceneTwo from "./components/SceneTwo";
-import SceneThree from "./components/SceneThree";
 
 import { useHorizontalStory } from './hooks/useHorizontalStory';
 
@@ -14,27 +12,29 @@ function App() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const birdRef = useRef<SVGGElement | null>(null);
   const birdImageRef = useRef<SVGImageElement>(null);
+  const sceneTwoRef = useRef<HTMLDivElement | null>(null);
+  const sceneOneBgRef = useRef<HTMLImageElement | null>(null);
 
   useHorizontalStory({
     sectionRef,
     containerRef,
-    birdRef
+    birdRef,
+    birdImageRef,
+    sceneTwoRef,
+    sceneOneBgRef
   });
 
   return (
     <main>
       <section ref={sectionRef} className="horizontal-section">
-        <BirdPath
-          birdRef={birdRef}
-          birdImageRef={birdImageRef}
-        />
 
         <div ref={containerRef} className="horizontal-container">
-          <SceneOne />
-
-          <SceneTwo />
-
-          <SceneThree />
+          <SceneOne
+            birdRef={birdRef}
+            birdImageRef={birdImageRef}
+            sceneTwoRef={sceneTwoRef}
+            sceneOneBgRef={sceneOneBgRef}
+          />
         </div>
 
       </section>

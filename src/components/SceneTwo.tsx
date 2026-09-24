@@ -1,21 +1,24 @@
-function SceneTwo() {
+import type { RefObject } from "react";
+
+import scene02Bg from "../assets/scene02/scene_02_1_1x.webp";
+
+type SceneTwoProps = {
+  sceneTwoRef: RefObject<HTMLDivElement | null>;
+};
+
+function SceneTwo({ sceneTwoRef }: SceneTwoProps) {
   return (
-    <div className="scene scene-2">
-      <div
-        className="parallax-layer mountain-front"
-        data-speed="0.2"
-      >
-        MIDDLE
+    <div
+      ref={sceneTwoRef}
+      className="scene scene-2"
+    >
+      <div className="scene02-artwork">
+        <img
+          src={scene02Bg}
+          alt=""
+          className="scene02-background"
+        />
       </div>
-
-      <div
-        className="parallax-layer trees"
-        data-speed="-0.15"
-      >
-        FRONT
-      </div>
-
-      <h1>SCENE 02</h1>
     </div>
   );
 }

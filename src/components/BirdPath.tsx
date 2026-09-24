@@ -1,5 +1,6 @@
 import type { RefObject } from "react";
-import birdImage from "../assets/scene01/Pfb.jpg"
+
+import birdStand from "../assets/scene01/robin_stand_1_1x.webp"
 
 type BirdPathProps = {
   birdRef: RefObject<SVGGElement | null>;
@@ -8,10 +9,10 @@ type BirdPathProps = {
 
 function BirdPath({ birdRef, birdImageRef }: BirdPathProps) {
   return (
-    <svg className="bird-path" viewBox="0 -100 1400 500">
+    <svg className="bird-path" viewBox="0 0 4096 1280" preserveAspectRatio="xMinYMin meet">
       <path
         id="birdPath"
-        d="M0.0057373 325.807C58.3391 326.473 202.406 294.107 312.006 159.307C449.006 -9.19322 719.506 -54.6932 896.506 76.8068C1073.51 208.307 1349.01 371.307 1349.01 146.807C1349.01 -77.6931 1386.01 11.8069 1386.01 146.807"
+        d="M620.5 672C703.667 515.167 959.6 227.2 1318 330C1766 458.5 1972.5 800 2335.5 736C2698.5 672 2763 344 3118.5 266C3402.9 203.6 3644.67 282.667 3730 330"
         fill="none"
         stroke="black"
       />
@@ -19,9 +20,9 @@ function BirdPath({ birdRef, birdImageRef }: BirdPathProps) {
       <g ref={birdRef}>
         <image
           ref={birdImageRef}
-          href={birdImage}
-          width="80"
-          height="80"
+          href={birdStand}
+          width="180"
+          height="180"
         />
       </g>
     </svg>
