@@ -1,4 +1,7 @@
-import scene01Bg from "../assets/scene01/scene_01_1_1x.webp";
+import scene01Sky from "../assets/scene01/scene01_sky_1_1x.webp";
+import scene01Landscape from "../assets/scene01/scene_01_1_1x.webp"
+import scene01Cloud from "../assets/scene02/scene_02_cloud_1_1x.webp"
+
 import SceneTwo from "./SceneTwo";
 import type { RefObject } from "react";
 import BirdPath from "./BirdPath";
@@ -7,20 +10,33 @@ type SceneOneProps = {
   birdRef: RefObject<SVGGElement | null>;
   birdImageRef: RefObject<SVGImageElement | null>;
   sceneTwoRef: RefObject<HTMLDivElement | null>;
-  sceneOneBgRef: RefObject<HTMLImageElement | null>;
+  sceneOneLandscapeRef: RefObject<HTMLImageElement | null>;
+  cloudRef: RefObject<HTMLImageElement | null>;
 };
 
-function SceneOne({birdRef, birdImageRef, sceneTwoRef, sceneOneBgRef}:SceneOneProps) {
+function SceneOne({birdRef, birdImageRef, sceneTwoRef, sceneOneLandscapeRef, cloudRef}:SceneOneProps) {
   return (
     <div className="scene scene-1">
       <div className="scene01-artwork">
 
         <img
-          ref={sceneOneBgRef}
-          src={scene01Bg}
+          src={scene01Sky}
           alt=""
-          className="scene01-background"
+          className="scene01-sky"
         />
+        <img
+          ref={cloudRef}
+          src={scene01Cloud}
+          alt=""
+          className="scene01-cloud"
+        />
+        <img
+          ref={sceneOneLandscapeRef}
+          src={scene01Landscape}
+          alt=""
+          className="scene01-landscape"
+        />
+
 
         <SceneTwo sceneTwoRef={sceneTwoRef} />
 

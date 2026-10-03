@@ -1,0 +1,39 @@
+.scene-1{
+  flex: 0 0 auto;
+  width: auto;
+  height: 100vh;
+
+  aspect-ratio: 4096 / 1280;
+
+  position: relative;
+  overflow: hidden;
+
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.scene01-artwork {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.scene01-sky,
+.scene01-landscape,
+.scene01-cloud {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  flex: 0 0 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

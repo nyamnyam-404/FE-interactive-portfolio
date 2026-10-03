@@ -13,7 +13,8 @@ function App() {
   const birdRef = useRef<SVGGElement | null>(null);
   const birdImageRef = useRef<SVGImageElement>(null);
   const sceneTwoRef = useRef<HTMLDivElement | null>(null);
-  const sceneOneBgRef = useRef<HTMLImageElement | null>(null);
+  const sceneOneLandscapeRef = useRef<HTMLImageElement | null>(null);
+  const cloudRef = useRef<HTMLImageElement | null>(null);
 
   useHorizontalStory({
     sectionRef,
@@ -21,7 +22,8 @@ function App() {
     birdRef,
     birdImageRef,
     sceneTwoRef,
-    sceneOneBgRef
+    sceneOneLandscapeRef,
+    cloudRef,
   });
 
   return (
@@ -33,7 +35,8 @@ function App() {
             birdRef={birdRef}
             birdImageRef={birdImageRef}
             sceneTwoRef={sceneTwoRef}
-            sceneOneBgRef={sceneOneBgRef}
+            sceneOneLandscapeRef={sceneOneLandscapeRef}
+            cloudRef={cloudRef}
           />
         </div>
 

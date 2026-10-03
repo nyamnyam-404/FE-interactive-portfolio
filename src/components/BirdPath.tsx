@@ -12,9 +12,10 @@ function BirdPath({ birdRef, birdImageRef }: BirdPathProps) {
     <svg className="bird-path" viewBox="0 0 4096 1280" preserveAspectRatio="xMinYMin meet">
       <path
         id="birdPath"
-        d="M620.5 672C703.667 515.167 959.6 227.2 1318 330C1766 458.5 1972.5 800 2335.5 736C2698.5 672 2763 344 3118.5 266C3402.9 203.6 3644.67 282.667 3730 330"
+        d="M623.5 687C671 687 1013 480.5 1247 645.5C1627.9 914.08 1845 1092 2294.5 914.5C2652.94 772.957 2832.5 402 3149 199.5C3465.5 -2.99995 3763 253 3816.5 253"
+        transform="translate(0 -50)"
         fill="none"
-        stroke="black"
+        stroke="none"
       />
 
       <g ref={birdRef}>
