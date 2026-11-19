@@ -2,16 +2,13 @@ import type { RefObject } from "react";
 
 import scene02Bg from "../assets/scene02/scene_02_1_1x.webp";
 
-type SceneTwoProps = {
-  sceneTwoRef: RefObject<HTMLDivElement | null>;
+type SignpostSceneProps = {
+  signpostSceneRef: RefObject<HTMLDivElement | null>;
 };
 
-function SceneTwo({ sceneTwoRef }: SceneTwoProps) {
+function SignpostScene({ signpostSceneRef }: SignpostSceneProps) {
   return (
-    <div
-      ref={sceneTwoRef}
-      className="scene scene-2"
-    >
+    <div ref={signpostSceneRef} className="scene scene-2">
       <div className="scene02-artwork">
         <img
           src={scene02Bg}
@@ -23,4 +20,4 @@ function SceneTwo({ sceneTwoRef }: SceneTwoProps) {
   );
 }
 
-export default SceneTwo;
+export default SignpostScene;
